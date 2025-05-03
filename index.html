@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Fun Project</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Interactive Fun Project</h1>
+
+  <!-- Button with Events -->
+  <button id="funButton">Click Me!</button>
+  <p id="secretMessage" class="hidden">You found the secret!</p>
+
+  <!-- Image Gallery -->
+  <div class="slideshow">
+    <img id="galleryImage" src="https://via.placeholder.com/300x200?text=Image+1" alt="Gallery Image" />
+    <div class="controls">
+      <button onclick="prevImage()">Prev</button>
+      <button onclick="nextImage()">Next</button>
+    </div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tab active" onclick="openTab('about')">About</button>
+    <button class="tab" onclick="openTab('photos')">Photos</button>
+    <button class="tab" onclick="openTab('contact')">Contact</button>
+  </div>
+  <div id="about" class="tab-content show">This is the About section.</div>
+  <div id="photos" class="tab-content">Some nice photos go here.</div>
+  <div id="contact" class="tab-content">Contact form below.</div>
+
+  <!-- Form -->
+  <form id="signupForm" novalidate>
+    <input type="text" id="name" placeholder="Name" required />
+    <span class="feedback" id="nameFeedback"></span><br/>
+
+    <input type="email" id="email" placeholder="Email" required />
+    <span class="feedback" id="emailFeedback"></span><br/>
+
+    <input type="password" id="password" placeholder="Password" required />
+    <span class="feedback" id="passwordFeedback"></span><br/>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
